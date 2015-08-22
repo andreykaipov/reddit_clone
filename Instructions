@@ -1,0 +1,11 @@
+To create a Rails app, we issue the command
+	$ rails _4.x.x_ new the_apps_name
+
+We can generate controllers for our Rails app with:
+	$ rails generate controller static_pages
+
+If we made a mistake, we can undo our generation by
+	$ rails destroy controller static_pages
+
+The routes file is responsible for implementing the router that defines the correspondence between URLs and web pages.
+
