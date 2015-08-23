@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   # before saving, change the user's email to all downcase to standardize DB.
-  before_save { self.email = self.email.downcase }
+  before_save { self.email = self.email.downcase unless self.email.nil?}
 
   # A username must not be blank, must be between 4 and 30 characters,
   # must only consist of alphanumeric, underscore, and dash characters,
