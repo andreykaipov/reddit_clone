@@ -158,9 +158,24 @@ input {
   }
 }
 
+form {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+
+  ul {
+    text-align: left;
+  }
+}
+
+.btn {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
 /* miscellaneous */
 
-#flash-sign-up {
+#flash-messages {
   margin: auto;
   text-align: center;
   width: 50%;
