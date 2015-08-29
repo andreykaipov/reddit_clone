@@ -2,11 +2,13 @@
 
 <h1>All users</h1>
 
-<%= will_paginate %>
+
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="users-list">
     <ul class="users">
+      <%= will_paginate %>
+
       <% @users.each do |user| %>
         <li>
           <%= link_to user.username, user %>
@@ -17,7 +19,8 @@
         </li>
       <% end %>
     </ul>
+
+    <%= will_paginate %>
   </div>
 </div>
 
-<%= will_paginate %>

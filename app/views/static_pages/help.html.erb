@@ -1,3 +1,10 @@
 <% content_for(:title, "Help") %>
 <h1>Help</h1>
-<p>Are you lost? Click <%= link_to "here", root_path %> to go back home.</p>
+<h2>Are you lost?</h2>
+<p>
+  <ul id="help-list">
+    <li>Click <%= link_to "here", root_path %> to go back home.</li>
+    <li>Click <%= link_to "here", about_path %> to check out the details of this masterpiece.</li>
+    <li>Click <%= link_to "here", contact_path %> to contact the author of this masterpiece.</li>
+  </ul>
+</p>

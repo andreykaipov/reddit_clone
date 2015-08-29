@@ -192,7 +192,8 @@ form {
 
 .users {
   list-style: none;
-  margin: 0;
+  margin: auto;
+  width: 70%;
   li {
     overflow: auto;
     padding: 10px 0;
@@ -208,6 +209,23 @@ form {
 //   margin: auto;
 //   width: 50%;
 // }
+
+#help-list {
+  padding-left: 10%;
+  width: 50%;
+  margin: auto;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#about-paragraph {
+  width: 70%;
+  margin: auto;
+}
 
 #flash-messages {
   margin: auto;
