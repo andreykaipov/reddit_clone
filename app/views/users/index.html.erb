@@ -1,0 +1,23 @@
+<% content_for(:title, "All users") %>
+
+<h1>All users</h1>
+
+<%= will_paginate %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul class="users">
+      <% @users.each do |user| %>
+        <li>
+          <%= link_to user.username, user %>
+          <% if current_user.admin? && !current_user?(user) %>
+            |  <%= link_to("delete", user, {:method => :delete, 
+                                           :data => {confirm: "You sure?"}} ) %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%= will_paginate %>

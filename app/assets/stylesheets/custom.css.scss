@@ -99,6 +99,7 @@ footer {
 aside {
   section.user_info {
     margin-top: 20px;
+    float: right;
   }
   section {
     padding: 10px 0;
@@ -122,14 +123,14 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
+// .gravatar {
+//   float: left;
+//   margin-right: 10px;
+// }
 
-.gravatar_edit {
-  margin-top: 15px;
-}
+// .gravatar_edit {
+//   margin-top: 15px;
+// }
 
 /* forms */
 
@@ -187,7 +188,26 @@ form {
   margin-left: 0;
 }
 
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+  }
+}
+
+
 /* miscellaneous */
+
+// .gravatar_edit {
+//   margin: auto;
+//   width: 50%;
+// }
 
 #flash-messages {
   margin: auto;

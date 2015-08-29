@@ -21,7 +21,9 @@ class User < ActiveRecord::Base
                       :length => {maximum: 255}             })
 
   # A user's password must be at least 6 characters.
-  validates(:password, { :length => {minimum: 6} })
+  validates(:password, { :length => {minimum: 6},
+                         :presence => true,
+                         :allow_nil => true      })
 
   # The following method encrypts the user's password in the database using
   # the BCrypt gem. This method adds the virtual attributes password and
