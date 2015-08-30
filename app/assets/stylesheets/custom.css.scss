@@ -7,6 +7,15 @@
   box-sizing:         border-box;
 }
 
+#logo2 {
+  color: #333;
+  font-weight: bold;
+  letter-spacing: -1px;
+  #any {
+    color: orange;
+  }
+}
+
 body {
   padding-top: 55px;
 }
@@ -53,14 +62,16 @@ p {
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  padding-top: 9px;
   font-weight: bold;
+  color: #fff;
+  padding-top: 9px;
   letter-spacing: -1px;
   text-decoration: none;
+  #any {
+    color: orange;
+  }
   &:hover {
-    color: #777;
+    color: #888;
     text-decoration: none;
   }
 }
@@ -99,6 +110,7 @@ footer {
 aside {
   section.user_info {
     margin-top: 20px;
+    margin-right: 15px;
     float: right;
   }
   section {
@@ -223,8 +235,22 @@ form {
 }
 
 #about-paragraph {
-  width: 70%;
+  width: 65%;
   margin: auto;
+  font-size: 1.1em;
+  text-align: justify;
+  #wr {
+    color: #777;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 1.1em;
+  }
+  #any {
+    color: orange;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 1.1em;
+  }
 }
 
 #flash-messages {

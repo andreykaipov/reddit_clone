@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def full_title(page_title = "")
-    base_title = "Reddit Clone"
+    base_title = "wrany"
     if page_title.empty?
       return base_title
     else

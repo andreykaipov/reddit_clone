@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :username, use: [:finders]
+
+
   attr_accessor :remember_token
 
   # before saving, change the user's email to all downcase to standardize DB.
@@ -60,6 +64,7 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+
 
   # Used for case-insensitive look-up.
   scope :ci_find, lambda { |attribute, value| where("lower(#{attribute}) = ?", value.downcase).first }
