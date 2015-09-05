@@ -5,6 +5,25 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= render 'layouts/form' %>
-  </div>
+    <%= form_for @user, url: user_path(@user), html: { multipart: true } do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirm password" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label :email, "Email (optional)" %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :avatar, "Avatar (optional)" %>
+      <%= f.file_field :avatar %>
+      
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>  
 </div>

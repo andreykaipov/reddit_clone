@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   # looks like params = {controller: users, action: show, id: number}.
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def create
@@ -58,15 +59,7 @@ class UsersController < ApplicationController
 
     def user_params
       return params.require(:user).permit(:username, :password,
-                           :password_confirmation, :email);
-    end
-
-    # Confirms a logged-in user.
-    def logged_in_user
-      unless logged_in?
-        flash[:danger] = "Please log in!"
-        redirect_to login_url
-      end
+                           :password_confirmation, :email, :avatar);
     end
 
     def correct_user

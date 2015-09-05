@@ -2,6 +2,11 @@ class User < ActiveRecord::Base
   extend FriendlyId
   friendly_id :username, use: [:finders]
 
+  has_many :microposts, dependent: :destroy
+  has_attached_file :avatar, :styles => { :thumb => "50x50#",
+                                          :small  => "100x100>",
+                                          :medium => "200x200"   },
+                    :default_url => ":style/default_avatar.png"
 
   attr_accessor :remember_token
 
@@ -35,6 +40,10 @@ class User < ActiveRecord::Base
   # password presence, password max length must be <= 72, confirmation
   # of password.
   has_secure_password
+
+  validates_attachment :avatar, content_type: 
+                             { content_type: ["image/jpg", "image/jpeg",
+                                               "image/png", "image/gif"] }
 
   # Returns the hash digest of the given string.
   def User.digest(string)
