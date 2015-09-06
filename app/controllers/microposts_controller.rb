@@ -13,6 +13,8 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
+    Micropost.find(params[:id]).destroy
+    redirect_to request.referrer || root_url
   end
 
   private
