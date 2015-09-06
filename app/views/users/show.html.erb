@@ -3,7 +3,9 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= image_tag @user.avatar.url(:small) %>
+        <span id="user_picture">
+          <%= image_tag @user.avatar.url(:small) %>
+        </span>
         <%= @user.username %>
       </h1>
     </section>

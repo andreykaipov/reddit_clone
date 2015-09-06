@@ -74,6 +74,9 @@ class User < ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
 
   # Used for case-insensitive look-up.
   scope :ci_find, lambda { |attribute, value| where("lower(#{attribute}) = ?", value.downcase).first }

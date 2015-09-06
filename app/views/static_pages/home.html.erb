@@ -1,6 +1,10 @@
-<div class="center jumbotron">
-  <h1>Welcome to <span id='logo2'>wr<span id='any'>any</span></span>!</h1>
-  <h2>write anything.</h2>
-  
-  <%= link_to "Sign up or whatever.", signup_path, class: "btn btn-primary" %>
-</div>
+<% if logged_in? %>
+  <%= render 'layouts/home_page_when_logged_in' %>
+<% else %>
+  <div class="center jumbotron">
+    <h1>Welcome to <span id='logo2'>wr<span id='any'>any</span></span>!</h1>
+    <h2>write anything.</h2>
+    
+    <%= link_to "Sign up or whatever.", signup_path, class: "btn btn-primary" %>
+  </div>
+<% end %>

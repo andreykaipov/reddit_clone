@@ -110,8 +110,6 @@ footer {
 aside {
   section.user_info {
     margin-top: 20px;
-    margin-right: 15px;
-    float: left;
   }
   section {
     padding: 10px 0;
@@ -126,23 +124,19 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 2.4em;
-      text-align: center;
+      font-size: 1.5em;
+      text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+
+      #user_picture {
+        float: left;
+        margin-right: 10px;
+      }
     }
   }
 }
-
-// .gravatar {
-//   float: left;
-//   margin-right: 10px;
-// }
-
-// .gravatar_edit {
-//   margin-top: 15px;
-// }
 
 /* forms */
 
@@ -173,9 +167,8 @@ input {
 
 form {
   text-align: center;
-  width: 50%;
-  margin: auto;
-
+  //width: 50%;
+  //margin: auto;
   ul {
     text-align: left;
   }
@@ -261,12 +254,7 @@ span.picture {
   }
 } 
 
-/* miscellaneous */
 
-// .gravatar_edit {
-//   margin: auto;
-//   width: 50%;
-// }
 
 #help-list {
   padding-left: 10%;
