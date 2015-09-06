@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   validates_attachment :avatar, content_type: 
-                             { content_type: ["image/jpg", "image/jpeg",
+                              { content_type: ["image/jpg", "image/jpeg",
                                                "image/png", "image/gif"] }
 
   # Returns the hash digest of the given string.
