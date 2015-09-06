@@ -27,7 +27,7 @@ module SessionsHelper
 
   # Returns true if the user is logged in, false otherwise.
   def logged_in?
-    !!current_user
+    !current_user.nil?
   end
 
   # Forgets a persistent session.

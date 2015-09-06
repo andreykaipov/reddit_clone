@@ -1,23 +1,27 @@
 <% content_for(:title, "Log in") %>
-<h1>Log in</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, {url: login_path}) do |f| %>
-      <%= f.label(:username) %>
-      <%= f.text_field(:username, class: 'form-control') %>
+<% if logged_in? %>
+  <% controller.redirect_to root_url %>
+<% else %>
+  <h1>Log in</h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:session, {url: login_path}) do |f| %>
+        <%= f.label(:username) %>
+        <%= f.text_field(:username, class: 'form-control') %>
 
-      <%= f.label(:password) %>
-      <%= f.password_field(:password, class: 'form-control') %>
-      
-      <%= f.label :remember_me, class: "checkbox inline" do %>
-        <%= f.check_box :remember_me %>
-        <span>Remember me</span>
+        <%= f.label(:password) %>
+        <%= f.password_field(:password, class: 'form-control') %>
+        
+        <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me</span>
+        <% end %>
+
+        <%= f.submit("Log in", class: "btn btn-primary") %>
       <% end %>
-
-      <%= f.submit("Log in", class: "btn btn-primary") %>
-    <% end %>
-    <h2>
-      New user? <%= link_to("Sign up here if you want.", signup_path) %>
-    </h2>
-  </div>  
-</div>
+      <h2>
+        New user? <%= link_to("Sign up here if you want.", signup_path) %>
+      </h2>
+    </div>  
+  </div>
+<% end %>

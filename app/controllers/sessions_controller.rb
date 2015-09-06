@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.ci_find('username', params[:session][:username])
+    user = User.ci_find('username', params[:session][:username]).first
     # if the user is nil, then the following if statement fails,
     # which is why we test user && user.authenticate(..)
     if user && user.authenticate(params[:session][:password])
@@ -20,4 +20,6 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
+
+
 end

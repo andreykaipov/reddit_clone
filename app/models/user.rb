@@ -79,5 +79,5 @@ class User < ActiveRecord::Base
   end
 
   # Used for case-insensitive look-up.
-  scope :ci_find, lambda { |attribute, value| where("lower(#{attribute}) = ?", value.downcase).first }
+  scope :ci_find, lambda { |attribute, value| where("lower(#{attribute}) = ?", value.downcase) }
 end
