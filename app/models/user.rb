@@ -3,10 +3,12 @@ class User < ActiveRecord::Base
   friendly_id :username, use: [:finders]
 
   has_many :microposts, dependent: :destroy
-  has_attached_file :avatar, :styles => { :thumb => "50x50#",
-                                          :small  => "100x100>",
-                                          :medium => "200x200"   },
-                    :default_url => ":style/default_avatar.png"
+  has_attached_file :avatar,
+                    :styles => { :thumb => "50x50#",
+                                 :small  => "100x100>",
+                                 :medium => "200x200"   },
+                    :default_url => ":style/default_avatar.png",
+                    :bucket => ENV['S3_BUCKET_NAME']
 
   attr_accessor :remember_token
 
