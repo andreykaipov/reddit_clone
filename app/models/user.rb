@@ -8,7 +8,12 @@ class User < ActiveRecord::Base
                                  :small  => "100x100>",
                                  :medium => "200x200"   },
                     :default_url => ":style/default_avatar.png",
-                    :bucket => ENV['S3_BUCKET_NAME']
+                    :storage => :s3,
+                    :s3_credentials => {
+                      :bucket => ENV['S3_BUCKET_NAME'],
+                      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+                      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+                    }
 
   attr_accessor :remember_token
 

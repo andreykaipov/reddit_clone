@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
 gem 'rails',                  '4.2.2'
 gem 'bcrypt',                 '3.1.7'   #to encrypt passwords and tokens
 gem 'faker',                   '1.4.2'  #to seed the database quickly
 gem 'friendly_id'                       #to use user's names in urls
-gem "paperclip",              "~> 4.3"  #for profile pics and img upload
-gem 'aws-sdk' #for production uploads
+gem 'paperclip',              "~> 4.3"  #for profile pics and img upload
+gem 'aws-sdk', '< 2.0'
 gem 'will_paginate',           '3.0.7'  #bootstrap thing for paginations
 gem 'bootstrap-will_paginate', '0.0.10' #same thing i guess
 gem 'bootstrap-sass',         '3.2.0.0' #sassy css
