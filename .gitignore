@@ -19,5 +19,5 @@
 # Ignore uploaded test images.
 /public/system
 
-# Ignore environment variables
-/config/initializers/env.rb
+# Ignore aws keys
+/config/application.yml
