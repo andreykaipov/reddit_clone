@@ -153,7 +153,7 @@ aside {
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+      color: orange;
     }
   }
   strong {
@@ -350,4 +350,3 @@ span.picture {
   margin-top: 45px;
   @include box_sizing;
 }
-
