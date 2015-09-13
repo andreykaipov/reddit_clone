@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   extend FriendlyId
   friendly_id :username, use: [:finders]
+  
+  # orders user's based on creation date (for production)
+  default_scope -> { order(:created_at) }
 
   has_many :microposts, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
