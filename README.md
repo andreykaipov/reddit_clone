@@ -1,28 +1,9 @@
-== README
+This website acts as a Twitter clone, and was created to learn the basics of web development.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The title of this website is a portmanteau of the words write and anything.
 
-Things you may want to cover:
+This website was made using Ruby on Rails.
 
-* Ruby version
+I used Michael Hartl's Tutorial as a guide to help me through the process.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Whenever I want to learn something new with Rails, I use this website as a playground.
