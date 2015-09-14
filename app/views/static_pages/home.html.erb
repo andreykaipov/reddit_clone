@@ -3,8 +3,9 @@
 <% else %>
   <div class="center jumbotron">
     <h1>Welcome to <span id='logo2'>wr<span id='any'>any</span></span>!</h1>
-    <h2>write anything.</h2>
+    <h3 style="color:#555">write anything</h3>
+    <h2>It's clever, right?</h2>
     
-    <%= link_to "Sign up or whatever.", signup_path, class: "btn btn-primary" %>
+    <%= simple_format link_to "Sign up now, or whatever.\nNo email required!", signup_path, class: "btn btn-primary" %>
   </div>
 <% end %>
